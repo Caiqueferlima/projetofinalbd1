@@ -14,7 +14,7 @@ O seguinte projeto faz parte da avaliação final da disciplina de BDI (Banco de
 ---
 
 ## Minimundo
-No mercado do Cuel, uma rotina organizada é fundamental para garantir que produtos variados estejam sempre disponíveis e frescos para os clientes. O estoque é controlado com atenção, monitorando cada produto com informações detalhadas como ID, nome, preço, quantidade disponível e data de validade. Os fornecedores são essenciais para o abastecimento constante de itens necessários para reposição, com quem o mercado mantém uma relação regular para garantir a entrega pontual dos produtos, destes, é necessário o armazenamento de ID, nome, telefone e CNPJ. Os funcionários, incluindo atendentes e gerentes, cuidam das operações diárias, auxiliando no atendimento ao cliente e organizando o ambiente de compras, dos funcionários há a necessidade de armazenar ID, nome, cargo, telefone e salário. Os clientes, por sua vez, têm à disposição uma ampla gama de produtos e podem optar por realizar suas compras diretamente no mercado ou até fazer pedidos, deles, o banco armazena o ID, nome, CPF, endereço e telefone. Todas as vendas realizadas são registradas, detalhando os produtos adquiridos, as quantidades e o valor total da compra, sendo que algumas informações de clientes frequentes são armazenadas para possibilitar futuras promoções ou para o acompanhamento de pedidos personalizados. Além disso, o mercado realiza uma gestão financeira detalhada para o controle interno com o objetivo de manter a operação sustentável e preparada para futuras melhorias ou expansão. Dessa forma, o mercado garante uma operação eficiente e um atendimento de qualidade, com um planejamento cuidadoso em cada etapa do processo.
+No mercado do Cuel, uma rotina organizada é fundamental para garantir que produtos variados estejam sempre disponíveis e frescos para os clientes. O estoque é controlado com atenção, monitorando cada produto com informações detalhadas como ID, nome, preço, quantidade disponível e data de validade. Os fornecedores são essenciais para o abastecimento constante de itens necessários para reposição, com quem o mercado mantém uma relação regular para garantir a entrega pontual dos produtos, destes, é necessário ID, nome, telefone e CNPJ. Dos pedidos, é necessário o ID, valor e data. Os funcionários, incluindo atendentes e gerentes, cuidam das operações diárias, auxiliando no atendimento ao cliente e organizando o ambiente de compras e fazendo pedido aos fornecedores. Dos funcionários há a necessidade de armazenar ID, nome, cargo, telefone e salário. Dos clientes, o banco armazena o ID, nome, CPF, endereço e telefone. Todas as vendas realizadas são registradas, detalhando os produtos adquiridos, as quantidades e o valor total da compra.
 
 ## Tecnologias utilizadas
 - brModelo para modelagem
@@ -24,7 +24,7 @@ No mercado do Cuel, uma rotina organizada é fundamental para garantir que produ
 A equipe separou as atividades a serem feitas de maneira dinâmica, com separação de tasks onde decidiram juntos em cada parte cada um ia trabalhar, mas mantendo comunicação uns com os outros em relação a dificuldades com a própria parte.
 
 ## Modelo Entidade Relacionamento (MER)
-
+![Modelo entidade relacionamento](./assets/MER.png)
 
 ## Modelo Relacional (MR)
 
