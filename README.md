@@ -23,11 +23,19 @@ No mercado do Cuel, uma rotina organizada é fundamental para garantir que produ
 ## Desenvolvimento
 A equipe separou as atividades a serem feitas de maneira dinâmica, com separação de tasks onde decidiram juntos em cada parte cada um ia trabalhar, mas mantendo comunicação uns com os outros em relação a dificuldades com a própria parte.
 
+A divisão geral foi:
+Emilly: MER
+Maria Clara: MR
+Guilherme e Raquel: Modelo físico 
+Caíque: Organização geral e correção de erros
+
+A participação de cada integrante pode ser observada nos commits do repositório, e vale lembrar que, a separação de tasks foi feita para organização, mas todos os integrantes fizeram parte de todo o processo do início ao fim, pois cada task sequente dependia da anterior.
+
 ## Modelo Entidade Relacionamento (MER)
-![Modelo entidade relacionamento](./assets/MER.png)
+![Modelo entidade relacionamento](./assets/mer.png)
 
 ## Modelo Relacional (MR)
-
+![Modelo relacional](./assets/mr.png)
 
 ## Consultas
 
