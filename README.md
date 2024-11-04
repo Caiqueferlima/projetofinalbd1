@@ -21,15 +21,18 @@ No mercado do Cuel, uma rotina organizada é fundamental para garantir que produ
 - MySQL como SGBD
 
 ## Desenvolvimento
-A equipe separou as atividades a serem feitas de maneira dinâmica, com separação de tasks onde decidiram juntos em cada parte cada um ia trabalhar, mas mantendo comunicação uns com os outros em relação a dificuldades com a própria parte.
 
-A divisão geral foi:
-Emilly: MER
-Maria Clara: MR
-Guilherme e Raquel: Modelo físico 
-Caíque: Organização geral e correção de erros
+A equipe organizou as atividades de maneira dinâmica, dividindo as tasks de acordo com a especialidade e interesse de cada integrante. As decisões sobre a alocação das tasks foram tomadas em conjunto, mantendo uma comunicação constante para apoiar qualquer dificuldade em cada etapa.
 
-A participação de cada integrante pode ser observada nos commits do repositório, e vale lembrar que, a separação de tasks foi feita para organização, mas todos os integrantes fizeram parte de todo o processo do início ao fim, pois cada task sequente dependia da anterior.
+### Divisão de Tarefas
+
+- **Emilly**: Modelagem Entidade-Relacionamento (MER)
+- **Maria Clara**: Modelagem Relacional (MR)
+- **Guilherme e Raquel**: Criação do Modelo Físico
+- **Caíque**: Organização geral e correção de erros
+
+A contribuição de cada integrante pode ser observada nos commits do repositório. Vale ressaltar que, embora as tasks tenham sido divididas para fins de organização, todos participaram de cada fase do projeto, pois cada task dependia da subsequente.
+
 
 ## Modelo Entidade Relacionamento (MER)
 ![Modelo entidade relacionamento](./assets/mer.png)
