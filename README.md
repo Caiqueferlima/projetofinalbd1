@@ -35,10 +35,10 @@ A contribuição de cada integrante pode ser observada nos commits do repositór
 
 
 ## Modelo Entidade Relacionamento (MER)
-![Modelo entidade relacionamento](./assets/mer.png)
+![Modelo entidade relacionamento](./assets/MER.png)
 
 ## Modelo Relacional (MR)
-![Modelo relacional](./assets/mr.png)
+![Modelo relacional](./assets/MR.png)
 
 ## Consultas
 
