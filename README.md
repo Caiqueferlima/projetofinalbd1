@@ -6,9 +6,9 @@ O seguinte projeto faz parte da avaliação final da disciplina de BDI (Banco de
 - [Minimundo](#minimundo)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Desenvolvimento](#desenvolvimento)
-- [Modelo Entidade Relacionamento (MER)](#modelo-entidade-relacionamento)
-- [Modelo Relacional (MR)](#modelo-relacional)
-- [Consultas](#consulta)
+- [Modelo Entidade Relacionamento (MER)](#modelo-entidade-relacionamento-(mer))
+- [Modelo Relacional (MR)](#modelo-relacional-(mr))
+- [Consultas](#consultas)
 - [Equipe](#equipe)
 
 ---
@@ -28,7 +28,8 @@ A equipe organizou as atividades de maneira dinâmica, dividindo as tasks de aco
 
 - **Emilly**: Modelagem Entidade-Relacionamento (MER)
 - **Maria Clara**: Modelagem Relacional (MR)
-- **Guilherme e Raquel**: Criação do Modelo Físico
+- **Guilherme**: Criação do Modelo Físico
+- **Raquel**: Inserção de dados e consultas no Modelo Físico
 - **Caíque**: Organização geral e correção de erros
 
 A contribuição de cada integrante pode ser observada nos commits do repositório. Vale ressaltar que, embora as tasks tenham sido divididas para fins de organização, todos participaram de cada fase do projeto, pois cada task dependia da subsequente.
