@@ -26,19 +26,19 @@ No mercado do Cuel, uma rotina organizada é fundamental para garantir que produ
 ```
 projetofinalbd1/
 │
-├── assets/
-│   ├── MER.png                  # Diagrama do Modelo Entidade-Relacionamento (MER)
-│   └── MR.png                   # Diagrama do Modelo Relacional (MR)
-│
 ├── Modelo Físico/
-│   ├── Inserts.sql              # Script SQL para inserir dados nas tabelas do banco de dados
-│   ├── ModeloFisico.sql         # Script SQL para criar as tabelas do banco de dados
-│   └── Consultas.sql            # Script SQL com as consultas SQL para o projeto
+│   ├── Inserts.sql               # Script SQL para inserir dados nas tabelas do banco de dados
+│   ├── ModeloFisico.sql          # Script SQL para criar as tabelas do banco de dados
+│   └── Consultas.sql             # Script SQL com as consultas SQL para o projeto
 │
-├── descrição da atividade.pdf    # Documento PDF com a descrição da atividade
-├── MER.brM3                      # Arquivo do modelo MER no formato brModelo
+├── assets/
+│   ├── MER.png                   # Diagrama do Modelo Entidade-Relacionamento (MER)
+│   └── MR.png                    # Diagrama do Modelo Relacional (MR)
+│
 ├── MR.brM3                       # Arquivo do modelo relacional no formato brModelo
-└── README.md                     # Arquivo README com instruções do projeto
+├── MER.brM3                      # Arquivo do modelo MER no formato brModelo
+├── README.md                     # Arquivo README com instruções do projeto
+└── descrição da atividade.pdf    # Documento PDF com a descrição da atividade
 ```
 
 ## Desenvolvimento
@@ -57,10 +57,10 @@ A contribuição de cada integrante pode ser observada nos commits do repositór
 
 
 ## Modelo Entidade Relacionamento MER
-![Modelo entidade relacionamento](./assets/MER.png)
+![Modelo entidade relacionamento](./assets/MER.png) 
 
 ## Modelo Relacional MR
-![Modelo relacional](./assets/MR.png)
+![Modelo relacional](./assets/MR.png) 
 
 ## Consultas
 
