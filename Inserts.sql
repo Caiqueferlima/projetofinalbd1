@@ -77,11 +77,11 @@ VALUES
 -- Tabela Produto_Fornecedor
 INSERT INTO Produto_Fornecedor (ID_produto, ID_fornecedor, Tempo_entrega) 
 VALUES 
-    (1, 1, 'Entrega em 4 dias'),  -- Arroz, Distribuidora Alimentos Ltda
-    (2, 2, 'Entrega em 5 dias'),  -- Feijão, Alimentos Brasil S.A.
-    (3, 3, 'Entrega em 3 dias'),  -- Óleo, Comercial Norte Ltda (novo)
-    (4, 4, 'Entrega em 2 dias'),  -- Shampoo, Atacado Sul S.A. (novo)
-    (5, 5, 'Entrega em 6 dias');  -- Manteiga, Distribuidora Central ME (novo)
+    (1, 1, 'Entrega em 4 dias'),
+    (2, 2, 'Entrega em 5 dias'),
+    (3, 3, 'Entrega em 3 dias'),
+    (4, 4, 'Entrega em 2 dias'),
+    (5, 5, 'Entrega em 6 dias');
 
 -- Tabela Pedido_Fornec_Func
 INSERT INTO Pedido_Fornec_Func (ID_pedido, ID_funcionario, ID_fornecedor, Valor, Prazo_entrega) 
