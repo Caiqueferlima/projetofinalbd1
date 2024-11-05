@@ -5,9 +5,10 @@ O seguinte projeto faz parte da avaliação final da disciplina de BDI (Banco de
 ## Índice
 - [Minimundo](#minimundo)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Arquitetura de pastas](#arquitetura-de-pastas)
 - [Desenvolvimento](#desenvolvimento)
-- [Modelo Entidade Relacionamento (MER)](#modelo-entidade-relacionamento-(mer))
-- [Modelo Relacional (MR)](#modelo-relacional-(mr))
+- [Modelo Entidade Relacionamento (MER)](#modelo-entidade-relacionamento-mer)
+- [Modelo Relacional (MR)](#modelo-relacional-mr)
 - [Consultas](#consultas)
 - [Equipe](#equipe)
 
@@ -19,6 +20,26 @@ No mercado do Cuel, uma rotina organizada é fundamental para garantir que produ
 ## Tecnologias utilizadas
 - brModelo para modelagem
 - MySQL como SGBD
+
+## Arquitetura de pastas
+
+```
+projetofinalbd1/
+│
+├── assets/
+│   ├── MER.png                  # Diagrama do Modelo Entidade-Relacionamento (MER)
+│   └── MR.png                   # Diagrama do Modelo Relacional (MR)
+│
+├── Modelo Físico/
+│   ├── Inserts.sql              # Script SQL para inserir dados nas tabelas do banco de dados
+│   ├── ModeloFisico.sql         # Script SQL para criar as tabelas do banco de dados
+│   └── Consultas.sql            # Script SQL com as consultas SQL para o projeto
+│
+├── descrição da atividade.pdf    # Documento PDF com a descrição da atividade
+├── MER.brM3                      # Arquivo do modelo MER no formato brModelo
+├── MR.brM3                       # Arquivo do modelo relacional no formato brModelo
+└── README.md                     # Arquivo README com instruções do projeto
+```
 
 ## Desenvolvimento
 
@@ -35,10 +56,10 @@ A equipe organizou as atividades de maneira dinâmica, dividindo as tasks de aco
 A contribuição de cada integrante pode ser observada nos commits do repositório. Vale ressaltar que, embora as tasks tenham sido divididas para fins de organização, todos participaram de cada fase do projeto, pois cada task dependia da subsequente.
 
 
-## Modelo Entidade Relacionamento (MER)
+## Modelo Entidade Relacionamento MER
 ![Modelo entidade relacionamento](./assets/MER.png)
 
-## Modelo Relacional (MR)
+## Modelo Relacional MR
 ![Modelo relacional](./assets/MR.png)
 
 ## Consultas
