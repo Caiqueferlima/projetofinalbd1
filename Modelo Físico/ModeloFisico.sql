@@ -36,13 +36,13 @@ CREATE TABLE Fornecedor (
 CREATE TABLE Pedido (
     ID_Pedido INT AUTO_INCREMENT PRIMARY KEY,
     Valor FLOAT,
-    Data DATE
+    Data_pedido DATE
 );
 
 CREATE TABLE Funcionario (
     ID_funcionario INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(50),
-    Cargo CHAR(50),
+    Cargo VARCHAR(50),
     Telefone CHAR(14),
     Salario FLOAT
 );
@@ -51,8 +51,6 @@ CREATE TABLE Func_Venda_Cliente (
     ID_funcionario INT,
     ID_Venda INT,
     ID_Cliente INT,
-    Data_vinculo CHAR(50),
-    Observacoes CHAR(50),
     PRIMARY KEY (ID_funcionario, ID_Venda, ID_Cliente),
     CONSTRAINT fkFuncionario FOREIGN KEY (ID_funcionario) REFERENCES Funcionario (ID_funcionario),
     CONSTRAINT fkVenda FOREIGN KEY (ID_Venda) REFERENCES Compra_Venda (ID_venda),
@@ -63,7 +61,6 @@ CREATE TABLE Produto_Venda (
     ID_Compra INT,
     ID_Produto INT,
     Quantidade INT,
-    Preco_unitario FLOAT,
     PRIMARY KEY (ID_Compra, ID_Produto),
     CONSTRAINT fkCompra FOREIGN KEY (ID_Compra) REFERENCES Compra_Venda (ID_venda),
     CONSTRAINT fkProduto FOREIGN KEY (ID_Produto) REFERENCES Produto (ID_produto)
@@ -72,7 +69,6 @@ CREATE TABLE Produto_Venda (
 CREATE TABLE Produto_Fornecedor (
     ID_produto INT,
     ID_fornecedor INT,
-    Tempo_entrega CHAR(100),
     PRIMARY KEY (ID_produto, ID_fornecedor),
     CONSTRAINT fkProdutoFornecedor FOREIGN KEY (ID_produto) REFERENCES Produto (ID_produto),
     CONSTRAINT fkFornecedor FOREIGN KEY (ID_fornecedor) REFERENCES Fornecedor (ID_fornecedor)
@@ -82,8 +78,6 @@ CREATE TABLE Pedido_Fornec_Func (
     ID_pedido INT,
     ID_funcionario INT,
     ID_fornecedor INT,
-    Valor FLOAT,
-    Prazo_entrega DATE,
     PRIMARY KEY (ID_pedido, ID_funcionario, ID_fornecedor),
     CONSTRAINT fkPedido FOREIGN KEY (ID_pedido) REFERENCES Pedido (ID_Pedido),
     CONSTRAINT fkFunc FOREIGN KEY (ID_funcionario) REFERENCES Funcionario (ID_funcionario),
