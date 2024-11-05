@@ -12,10 +12,8 @@ CREATE TABLE Cliente (
 
 CREATE TABLE Compra_Venda (
     ID_venda INT AUTO_INCREMENT PRIMARY KEY,
-    Data DATE,
-    Valor_total FLOAT,
-    Produtos VARCHAR(255),
-    Forma_pagamento VARCHAR(20)
+    Data_venda DATE,
+    Valor_total FLOAT
 );
 
 CREATE TABLE Produto (
