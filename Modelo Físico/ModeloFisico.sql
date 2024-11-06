@@ -1,4 +1,4 @@
-DROP DATABASE MercadinhoCuel;
+DROP DATABASE IF EXISTS MercadinhoCuel;
 CREATE DATABASE MercadinhoCuel;
 USE MercadinhoCuel;
 
