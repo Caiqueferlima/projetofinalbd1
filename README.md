@@ -63,7 +63,138 @@ A contribuição de cada integrante pode ser observada nos commits do repositór
 ![Modelo relacional](./assets/MR.png) 
 
 ## Consultas
+Todas as consultas podem ser visualizadas e testadas a partir do arquivo ```Consultas.sql``` facilmente encontrado no repositório. Foram feitas consultas usando os comandos SELECT, WHERE, BETWEEN, JOIN, GROUP BY, ORDER BY, AVG, SUM e COUNT.
 
+Segue abaixo o registro dos testes das consultas feitos pela equipe a partir do banco:
+
+### Tabela de Compras de Clientes
+#### Código SQL:
+```
+SELECT c.Nome AS Nome_Cliente, p.Nome AS Nome_Produto, p.Preco AS Preco_Unitario, pv.Quantidade AS Quantidade_Comprada, (p.Preco * pv.Quantidade) AS Valor_Total_Produto
+FROM Cliente c 
+INNER JOIN Func_Venda_Cliente fvc ON c.ID_cliente = fvc.ID_Cliente
+INNER JOIN Compra_Venda v ON fvc.ID_Venda = v.ID_venda
+INNER JOIN Produto_Venda pv ON v.ID_venda = pv.ID_Compra
+INNER JOIN Produto p ON pv.ID_Produto = p.ID_Produto;
+```
+
+#### Resultado:
+| Nome_Cliente   | Nome_Produto | Preco_Unitario | Quantidade_Comprada | Valor_Total_Produto |
+|----------------|--------------|----------------|----------------------|----------------------|
+| João Silva     | Arroz        | 5.5            | 2                    | 11                   |
+| Maria Santos   | Feijão       | 7.25           | 3                    | 21.75                |
+| Zé Maria       | Óleo         | 4.75           | 1                    | 4.75                 |
+| Ana Costa      | Shampoo      | 8.75           | 2                    | 17.5                 |
+| Carlos Pereira | Manteiga     | 1.75           | 5                    | 8.75                 |
+
+### Tabela que possui informações dos produtos em que o funcionario fez o pedido aos fornecedores.alter
+#### Código SQL:
+```
+SELECT f.ID_funcionario,f.Nome AS Nome_Funcionario,p.Nome AS Nome_Produto,cv.Valor_total, fn.Nome AS Nome_Fornecedor
+FROM Funcionario f
+JOIN Func_Venda_Cliente fvc ON f.ID_funcionario = fvc.ID_funcionario
+JOIN Compra_Venda cv ON fvc.ID_venda = cv.ID_venda
+JOIN Produto_Venda pv ON cv.ID_venda = pv.ID_Compra
+JOIN Produto p ON pv.ID_Produto = p.ID_Produto
+JOIN Pedido_Fornec_Func pff ON cv.ID_venda = pff.ID_pedido
+JOIN Fornecedor fn ON pff.ID_fornecedor = fn.ID_fornecedor;
+```
+
+#### Resultado:
+| ID_Funcionario | Nome_Funcionario | Nome_Produto | Valor_Total | Nome_Fornecedor             |
+|----------------|-------------------|--------------|-------------|-----------------------------|
+| 1              | Carlos Souza      | Arroz        | 150.75      | Distribuidora Alimentos Ltda |
+| 2              | Ana Lima          | Feijão       | 200.5       | Alimentos Brasil S.A.        |
+| 3              | Beatriz Almeida   | Óleo         | 320         | Comercial Norte Ltda         |
+| 4              | Pedro Santos      | Shampoo      | 150.25      | Atacado Sul S.A.             |
+| 5              | Luciana Melo      | Manteiga     | 250.75      | Distribuidora Central ME     |
+
+### Tabela dos produtos e seus devidos valores e quantidade
+#### Código SQL:
+```
+SELECT Nome AS Nome_Produto, Preco AS Valor_Produto, Quantidade_disponivel
+FROM Produto
+ORDER BY Nome;
+```
+
+#### Resultado:
+| Nome_Produto | Valor_Produto | Quantidade_Disponivel |
+|--------------|---------------|------------------------|
+| Arroz        | 5.5           | 100                    |
+| Feijão       | 7.25          | 80                     |
+| Manteiga     | 1.75          | 100                    |
+| Óleo         | 4.75          | 50                     |
+| Shampoo      | 8.75          | 25                     |
+
+### Tabela das ordens dos produtos.
+#### Código SQL:
+```
+SELECT p.Nome AS Produto, SUM(pv.Quantidade) AS Total_Vendido
+FROM Produto p
+JOIN Produto_Venda pv ON p.ID_Produto = pv.ID_Produto
+GROUP BY p.Nome
+ORDER BY Total_Vendido DESC;
+```
+
+#### Resultado:
+| Produto  | Total_Vendido |
+|----------|---------------|
+| Manteiga | 5             |
+| Feijão   | 3             |
+| Arroz    | 2             |
+| Shampoo  | 2             |
+| Óleo     | 1             |
+
+
+### Tabela com nomes dos clientes, produtos e datas referentes ao mes 10
+#### Código SQL:
+```
+SELECT c.Nome AS Nome_Cliente, p.Nome AS Produto, cv.Data_venda AS Data_Compra
+FROM Cliente c
+JOIN Func_Venda_Cliente fvc ON c.ID_cliente = fvc.ID_Cliente
+JOIN Compra_Venda cv ON fvc.ID_venda = cv.ID_venda
+JOIN Produto_Venda pv ON cv.ID_venda = pv.ID_Compra
+JOIN Produto p ON pv.ID_Produto = p.ID_Produto
+WHERE cv.Data_venda BETWEEN '2024-10-01' AND '2024-10-31';
+```
+
+#### Resultado:
+| Nome_Cliente | Produto | Data_Compra |
+|--------------|---------|-------------|
+| Maria Santos | Feijão  | 2024-10-21  |
+| Ana Costa    | Shampoo | 2024-10-23  |
+
+### Tabela com o nome dos clientes ordenados e com o produto comprado
+#### Código SQL:
+```
+SELECT c.Nome AS Nome_Cliente, p.Nome AS Nome_Produto
+FROM Cliente c
+INNER JOIN Func_Venda_Cliente fvc ON c.ID_cliente = fvc.ID_Cliente
+INNER JOIN Compra_Venda v ON fvc.ID_Venda = v.ID_venda
+INNER JOIN Produto_Venda pv ON v.ID_venda = pv.ID_Compra
+INNER JOIN Produto p ON pv.ID_Produto = p.ID_Produto
+ORDER BY c.Nome, p.Nome;
+```
+
+#### Resultado:
+| Nome_Cliente   | Nome_Produto |
+|----------------|--------------|
+| Ana Costa      | Shampoo      |
+| Carlos Pereira | Manteiga     |
+| João Silva     | Arroz        |
+| Maria Santos   | Feijão       |
+| Zé Maria       | Óleo         |
+
+### Tabela da media salarial dos funcionarios.
+#### Código SQL:
+```
+SELECT AVG (Salario) AS Média_Salarial_Funcionarios FROM funcionario;
+```
+
+#### Resultado:
+| Media_Salarial_Funcionarios   |
+|----------------|
+| 2400      | 
 
 ## Equipe
 <table align="center">
